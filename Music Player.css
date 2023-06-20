@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    src: url('/fontAwesome/webfonts/fa-solid-900.ttf') format('truetype');
+    src: url('/fontAwesome/webfonts/fa-brands-400.ttf') format('truetype');
+    src: url('/fontAwesome/webfonts/fa-regular-400.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: #f1f1f1;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 30rem;
+    height: 50rem;
+    background: rgba(2, 10, 20, 0.5);
+    border-radius: 2rem;
+    box-shadow: 3px 3px 2rem rgba(0, 0, 0, .2),
+        -2px -2px 2rem rgba(0, 0, 0, .2),
+        inset 8px 8px 10px rgba(0, 0, 0, .2),
+        inset -8px -8px 10px rgba(0, 0, 0, .2);
+}
+
+.container .head {
+    position: absolute;
+    top: 3rem;
+    left: 5%;
+    width: 90%;
+    height: 3rem;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container i {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: -30%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #aaa;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+#list.active {
+    background: #795548;
+    color: #EFEBE9;
+}
+
+.container .song_name {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -40%;
+    left: 15%;
+    width: 70%;
+    height: 3rem;
+    background: rgba(2, 10, 20, 0.2);
+    border-radius: 2rem;
+    color: #FFF;
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+
+.container .page1 {
+    position: absolute;
+    bottom: 30px;
+    left: 5%;
+    width: 90%;
+    height: 42rem;
+    background: #fff;
+    border-radius: 10px;
+    transform: scale(0) translateY(-200px);
+    transform-origin: top right;
+    transition: all 1s ease;
+    z-index: 1; 
+}
+
+.page1 h3{
+    text-align: center; 
+    margin-top: 2rem; 
+    font-size: 2rem; 
+    border-bottom: 3px solid #000; 
+    padding-bottom: 1rem; 
+    border-radius: 2rem; 
+}
+.page1 .list_songs li{
+    width: 100%; 
+    height: 3rem; 
+    background: #fff;
+    list-style: none; 
+    color: darkred; 
+    font-size: 1.4rem; 
+    font-weight: 100;
+    margin-top: .3rem; 
+    padding-top: 12px; 
+    padding-left: 2rem; 
+    box-shadow: 0 5px 1rem rgba(3, 15, 25, 0.5); 
+}
+.bd_circle {
+    position: absolute;
+    top: 14%;
+    left: 12%;
+    width: 23rem;
+    height: 23rem;
+    background: #aaa;
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 5px solid #aaa; 
+    box-shadow: 3px 3px 2rem rgba(0, 0, 0, .2),
+        -2px -2px 2rem rgba(0, 0, 0, .2),
+        inset 8px 8px 10px rgba(0, 0, 0, .2),
+        inset -8px -8px 10px rgba(0, 0, 0, .2);
+}
+.bd_circle img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    background-size: cover; 
+}
+.times{
+    position: absolute;
+    bottom: 30.9%; 
+    left: 5%; 
+    width: 90%; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    color: #000; 
+    font-size: 1.3rem; 
+    font-weight: 1000; 
+}
+.pro_area {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    width: 90%;
+    height: 1rem;
+    background: rgba(2, 10, 20, 0.5);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px #111,
+        inset 5px 5px 1rem rgba(3, 15, 25, 0.5),
+        inset -5px -5px 1rem rgba(3, 15, 25, 0.5);
+}
+
+.pro_area .pro_bar {
+    position: relative;
+    left: 0%; 
+    width: 0%;
+    height: inherit;
+    background: #880E4F;
+    border-radius: inherit;
+}
+
+.controls {
+    position: absolute;
+    bottom: 3rem;
+    left: 10%;
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.controls i {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: #aaa;
+    border-radius: 50%;
+    font-size: 2.4rem;
+}
+
+
+
+
+
+@media(max-width: 760px){
+.container {
+    position: relative;
+    width: 26rem;
+    height: 53rem;
+    background: rgba(2, 10, 20, 0.5);
+    border-radius: 2rem;
+    box-shadow: 3px 3px 2rem rgba(0, 0, 0, .2),
+        -2px -2px 2rem rgba(0, 0, 0, .2),
+        inset 8px 8px 10px rgba(0, 0, 0, .2),
+        inset -8px -8px 10px rgba(0, 0, 0, .2);
+}
+.container .song_name{
+    top: -25%;
+    left: 18%;
+    width: 65%;
+    height: 2rem;
+    background: rgba(2, 10, 20, 0.2);
+    border-radius: 2rem;
+    color: #F06292;
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+.bd_circle{
+    width: 20rem; 
+    height: 20rem; 
+    top: 19%;
+    left: 12%; 
+}
+.controls i{
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2.3rem;
+}
+.pro_area{
+    top: 65%; 
+    height: .5rem; 
+}
+.controls{
+    bottom: 15%; 
+}
+}
